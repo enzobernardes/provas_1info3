@@ -12,5 +12,13 @@
    const itensDisponiveis = ['maçã', 'pão', 'leite', 'manteiga', 'café'];
    let itens = [];
 
+   for(let compravel of listaDeCompras){
+    if(itensDisponiveis.indexOf(listaDeCompras) ){
+        itens.push(compravel)
+    }
+   } 
+
+   document.write(`Itens disponíveis: ${itens}`);
+
    
 </script>
