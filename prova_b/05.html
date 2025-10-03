@@ -6,4 +6,18 @@
     Usando for...of, crie um novo array contendo apenas as cidades da lista original que começam com a letra informada pelo usuário.
     Ao final, exiba o novo array com as cidades que atenderam a condição estabelecida.
     */
+
+    let cidade =  ["Recife", "Salvador", "Rio de Janeiro", "São Paulo", "Manaus"];
+    let letraCidade = prompt("Informe a primeira letra da cidade que deseja buscar.").trim().toUpperCase();
+    let cidadeAchada = [];
+    let temp = [];
+
+    for(let cid of cidade){
+        temp = cid.toUpperCase().split("");
+        if(temp[0] === letraCidade){
+            cidadeAchada.push(cid);
+            
+        }
+    }
+    document.write(`As cidaddes encontradas foram: ${cidadeAchada.join(" , ")}`);
 </script>
