@@ -8,20 +8,13 @@
     */
 
    let devendo = [50.00, 15.50, 120.00, 80];
-   listaJuros = [];
    let soma = 0;
-   let soma2 = 0;
    let juro = Number(prompt("Informe o valor dos juros a ser aplicado."))
 
-   
-   for(let numero of devendo){
-    soma = ((numero / 100) * juro);
-    listaJuros.push(numero + soma);
-   }
-   for(let numero2 of listaJuros){
-    soma2 = soma2 + numero2;
+   for (let valor of devendo) {
+    soma = soma + valor + (valor / 100 * juro);
    }
 
 
-   document.write(`o valor a ser pago é de ${soma2}`);
+   document.write(`o valor a ser pago é de ${soma.toFixed(2).replace(".",",")}`);
 </script>

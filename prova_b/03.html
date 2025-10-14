@@ -8,23 +8,21 @@
     */
 
     let precos = [50.00, 15.50, 120.00, 80];
-   let listaPagar = [];
-   let soma = 0;
-   let soma2 = 0;
-   let juro = Number(prompt("Informe o valor dos juros a ser aplicado."))
+    let soma = 0;
+    let juro = Number(prompt("Informe o valor dos juros a ser aplicado."))
 
-      for(let numero of precos){
+    for(let numero of precos){
         if(numero > 60){
-            soma = ((numero / 100) * juro);
-           listaPagar.push(numero + soma);
+            soma = soma  + numero - ((numero / 100) * juro);
+        }
+        else {
+            soma = soma + numero;
         }
    
-   }
-   for(let numero2 of listaPagar){
-    soma2 = soma2 + numero2;
-   }
+    }
 
-    document.write(`o valor a ser pago é de ${soma2}`);
+
+    document.write(`o valor a ser pago é de ${soma}`);
 
    
 </script>

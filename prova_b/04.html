@@ -7,16 +7,16 @@
     */
    
 let numeros = [33, 5, 88, 12, 91, 25];
-let numerosImpares = [];
+let qnt = 0;
 
 let novoNumero = Number(prompt("Informe um novo número.").trim());
 numeros.push(novoNumero);
 for(numero of numeros){
 	if(numero % 2 !== 0)
-		numerosImpares.push(numero);
+		qnt = qnt + 1;
 	}
 
 
-document.write(`Os números ímpares são: <li>${numerosImpares.join(" - ")}</li> e são ${numerosImpares.length} números impares.`);
+document.write(`Os números ímpares são: ${numeros.filter(e => e % 2 !== 0)}, sendo ${qnt} números impares.`);
 
 </script>

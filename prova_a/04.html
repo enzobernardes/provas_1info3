@@ -13,8 +13,8 @@
    let itens = [];
 
    for(let compravel of listaDeCompras){
-    if(itensDisponiveis.indexOf(listaDeCompras) ){
-        itens.push(compravel)
+    if(itensDisponiveis.indexOf(compravel) >= 0 ){
+        itens.push(compravel);
     }
    } 
 
