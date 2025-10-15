@@ -10,14 +10,13 @@
     let cidade =  ["Recife", "Salvador", "Rio de Janeiro", "São Paulo", "Manaus"];
     let letraCidade = prompt("Informe a primeira letra da cidade que deseja buscar.").trim().toUpperCase();
     let cidadeAchada = [];
-    let temp = [];
 
     for(let cid of cidade){
-        temp = cid.toUpperCase().split("");
-        if(temp[0] === letraCidade){
+        if(cid.charAt(0) == letraCidade){
             cidadeAchada.push(cid);
-            
         }
     }
-    document.write(`As cidaddes encontradas foram: ${cidadeAchada.filter()}`);
+    if(cidadeAchada.length > 0){
+        alert(`A lista de cidades com a letra: ${letraCidade}, É: ${cidadeAchada.join(" , ")}`);
+    }
 </script>
